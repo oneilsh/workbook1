@@ -20,4 +20,5 @@ FROM concept_set_members
 )
 SELECT *
 FROM input_concept_set_members
+WHERE codeset_id = 
 
