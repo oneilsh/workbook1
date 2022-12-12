@@ -6,8 +6,9 @@
 )
 #* plot_person:
 #*   inputs:
-#*     - person:
+#*     - person
 #*   ext: R
+#*   desc: "A basic plot example."
 #*   attr:
 #*     shape: hexagon
 #*     fillcolor: "#258915"
