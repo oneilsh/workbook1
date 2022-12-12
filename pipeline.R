@@ -6,9 +6,14 @@
 )
 #* plot_person:
 #*   inputs:
-#*     - person
-#*   code: |
-#* this is a basic plot example
+#*     - person:
+#*   ext: R
+#*   attr:
+#*     shape: hexagon
+#*     fillcolor: "#258915"
+#*     fontsize: "20"
+
+# this is a basic plot example
 library(ggplot2)
 
 plot_person <- function(person) {

@@ -6,9 +6,9 @@
 )
 --* input_concept_set_members:
 --*   ext: sql
+--*   desc: "Just returns the concept_set_members input"
 --*   inputs:
 --*     - concept_set_members
---*   code: |
 SELECT *
 FROM concept_set_members
 
@@ -18,9 +18,9 @@ FROM concept_set_members
 )
 --* pneumonia_concept_set:
 --*   ext: sql
+--*   desc: "Extract concepts childred on pneumonia (codeset ID 980588199)"
 --*   inputs:
 --*     - input_concept_set_members
---*   code: |
 SELECT concept_id 
 FROM input_concept_set_members
 WHERE codeset_id = 980588199 and is_most_recent_version = true
@@ -32,10 +32,10 @@ WHERE codeset_id = 980588199 and is_most_recent_version = true
 )
 --* pneumonia_conditions:
 --*   ext: sql
+--*   desc: "Extracts matching pneumonia conditions from the condition_era input."
 --*   inputs:
 --*     - pneumonia_concept_set
 --*     - condition_era
---*   code: |
 SELECT *
 FROM condition_era
 INNER JOIN pneumonia_concept_set ON pneumonia_concept_set.concept_id = condition_era.condition_concept_id
