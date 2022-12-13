@@ -40,10 +40,3 @@ SELECT *
 FROM condition_era
 INNER JOIN pneumonia_concept_set ON pneumonia_concept_set.concept_id = condition_era.condition_concept_id
 
-@transform_pandas(
-    Output(rid="ri.vector.main.execute.82b6120f-185e-4253-857f-3fd427d045a6"),
-    pneumonia_concept_set=Input(rid="ri.vector.main.execute.db839486-9cda-4e2b-90f5-c0711f0dbe55")
-)
-SELECT *
-FROM pneumonia_concept_set
-
