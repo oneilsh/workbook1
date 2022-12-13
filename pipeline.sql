@@ -24,6 +24,7 @@ FROM concept_set_members
 SELECT concept_id 
 FROM input_concept_set_members
 WHERE codeset_id = 980588199 and is_most_recent_version = true
+-- hehe
 
 @transform_pandas(
     Output(rid="ri.foundry.main.dataset.130ca484-5580-48a9-9480-686c6ea1824a"),
