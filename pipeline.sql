@@ -40,4 +40,5 @@ WHERE codeset_id = 980588199 and is_most_recent_version = true
 SELECT *
 FROM condition_era
 INNER JOIN pneumonia_concept_set ON pneumonia_concept_set.concept_id = condition_era.condition_concept_id
+-- now on example-branch
 
